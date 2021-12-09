@@ -1,0 +1,34 @@
+// we can't use function() / only we use [class App extends ]
+
+class App extends React.Component{
+  
+  fun1=()=>{
+    var a=Number(document.getElementById("m1").value);
+    var b=Number(document.getElementById("m2").value);
+  
+    //add // var c=a+b;
+
+    var c=a>b?"A value is big to 'B' value " : "B value is big to 'A' value"
+   document.getElementById("res").innerHTML=c;
+  
+  }
+  render() {
+    return (
+      <>
+      <h1>Addition</h1>
+      
+      <input type="number" id="m1"></input>
+      <input type="number" id="m2"></input>
+
+      <input type="button" value="click me" className="but" onClick={this.fun1}></input>
+      <div id="res"></div>
+      </>
+    );
+  }
+}
+
+
+
+
+
+export default App;
